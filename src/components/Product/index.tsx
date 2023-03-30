@@ -1,14 +1,24 @@
 import React from 'react';
 // import tshirtImage from '../../assets/tshirt.png';
-import { Container, Row, Panel, Column, Gallery, Section, Description } from './styles';
+import SellerInfo from '../SellerInfo';
+import ProductAction from '../ProductAction';
+import {
+  Container,
+  Row,
+  Panel,
+  Column,
+  Gallery,
+  Section,
+  Description
+} from './styles';
 
-const tshirtImage =  require("../../assets/tshirt.png")
+const tshirtImage =  require("../../assets/tshirt.png") //o formato de import não funciona para tsx
 
 const Product: React.FC = () =>{
   return (
     <Container>
       <Row>
-        <a href="#">COmpartilhar</a>
+        <a href="#">Compartilhar</a>
         <a href="#">Vender um igual</a>
       </Row>
 
@@ -21,8 +31,8 @@ const Product: React.FC = () =>{
         </Column>
         
         <Column>
-          {/* <ProductAction />
-          <SellerInfo /> */}
+          <ProductAction />
+          <SellerInfo /> 
 
           <WarrantySection />
           <WarrantySection />
@@ -55,6 +65,7 @@ const WarrantySection = () => (
         </p>
       </span>
     </div>
+    <a href=''>Saiba mais sobre garantia</a>
   </Section>
 )
 
